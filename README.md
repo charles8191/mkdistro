@@ -11,3 +11,9 @@ podman build -t mkdistro .
 mkdir output
 podman run -v ./output:/output -it mkdistro
 ```
+
+Testing it:
+
+```bash
+qemu-system-x86_64 -cdrom output/boot.iso
+```
